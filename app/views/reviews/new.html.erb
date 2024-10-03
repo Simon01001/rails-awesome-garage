@@ -1,5 +1,0 @@
-<%= simple_form_for ([@car, @review]) do |f| %>
-  <%= f.input :comment, label: "Review this car" %>
-  <%= f.input :rating, collection: 0..5 %>
-  <%= f.submit "Complete" %>
-<% end %>

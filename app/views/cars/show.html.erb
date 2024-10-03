@@ -3,11 +3,26 @@
 <h3><%= @car.year %></h3>
 <h3><%= @car.fuel %></h3>
 
-<%= link_to "Review this car", new_car_review_path(@car) %>
+<%= simple_form_for ([@car, @review]) do |f| %>
+  <%= f.input :comment, label: "Review this car" %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.submit "Complete" %>
+<% end %>
 
+<%= link_to "Review this car", new_car_review_path(@car) %>
+<%= link_to "View favourites", favourites_path %>
+<% if @car.favourites.empty? %>
+  <%= simple_form_for ([@car, @favourite]) do |f| %>
+    <%= f.submit "Add to favourites" %>
+  <% end %>
+<% else %>
+  <p>Already in favourites</p>
+<% end %>
 <ul>
   <% @car.reviews.each do |review| %>
     <li><h4>Reviw: <%= review.comment %></h4>
     <h4>Rating: <%= review.rating %></h4></li>
   <% end %>
 </ul>
+<%= link_to "View your favourites", favourites_path %>
+<%= link_to "Back to garage", cars_path %>

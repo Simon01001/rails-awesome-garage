@@ -1,0 +1,8 @@
+<h1>Favourites</h1>
+
+<% @favourites.each do |favourite| %>
+  <p><%= favourite.car.brand %></p>
+  <p><%= favourite.car.model %></p>
+  <%= button_to "Unfavour", favourite_path(favourite), method: :delete, data: { confirm: "Are you sure you want to unfavourite this car??" } %>
+<% end %>
+<%= link_to "Back to garage", cars_path %>

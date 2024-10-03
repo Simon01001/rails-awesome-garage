@@ -7,6 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Favourite.destroy.all
+Review.destroy.all
+Car.destroy.all
+Owner.destroy.all
+
+
 owner1 = Owner.create(nickname: "Mat")
 owner2 = Owner.create(nickname: "Greg")
 

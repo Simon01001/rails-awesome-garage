@@ -2,5 +2,6 @@
 <% @cars.each do |car| %>
   <ul>
     <%= link_to car.brand.capitalize, car_path(car) %>
+    <%= car.model %>
   </ul>
 <% end %>
