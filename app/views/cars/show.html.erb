@@ -1,0 +1,13 @@
+<h1><%= @car.brand %></h1>
+<h3><%= @car.model %></h3>
+<h3><%= @car.year %></h3>
+<h3><%= @car.fuel %></h3>
+
+<%= link_to "Review this car", new_car_review_path(@car) %>
+
+<ul>
+  <% @car.reviews.each do |review| %>
+    <li><h4>Reviw: <%= review.comment %></h4>
+    <h4>Rating: <%= review.rating %></h4></li>
+  <% end %>
+</ul>
