@@ -2,12 +2,14 @@
   <h1>Cars in this garage:</h1>
 </div>
 
-<div class="car_card">
+<div class="car_cards">
   <% @cars.each do |car| %>
-    <ul>
+    <div class="individual_card">
       <%= image_tag "placeholder_car.jpg" %>
-      <h2><%= link_to car.brand.capitalize, car_path(car), class: "car_link" %></h2>
-      <p><%= car.model %></p>
-    </ul>
+      <div class="card_description">
+        <h2><%= link_to car.brand.capitalize, car_path(car), class: "car_link" %></h2>
+        <h3>Model: <%= car.model %></h3>
+      </div>
+    </div>
   <% end %>
 </div>

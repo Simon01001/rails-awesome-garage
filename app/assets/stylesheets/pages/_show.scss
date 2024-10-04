@@ -1,0 +1,80 @@
+.car_details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 40%;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0.2,0.2,0.2,0.2);
+  margin: auto;
+  margin-top: 20px;
+}
+
+.form_button {
+  text-decoration: none;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: rgb(36, 33, 33);
+  transition: all 0.5s ease-in-out;
+  padding: 2px;
+  border-style: outset;
+  background-color: rgb(187, 180, 180);
+  border-color:rgb(230, 208, 208);
+  transition: all 0.5s ease-in-out;
+  border-radius: 30px;
+}
+
+.form_button:hover {
+  background-color: rgb(212, 230, 212);
+}
+
+.show_buttons {
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 30px;
+}
+
+#new_review {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+
+.complete_button {
+  text-decoration: none;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: rgb(36, 33, 33);
+  transition: all 0.5s ease-in-out;
+  padding: 2px;
+  border-style: outset;
+  background-color: rgb(187, 180, 180);
+  border-color:rgb(230, 208, 208);
+  transition: all 0.5s ease-in-out;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.complete_button:hover {
+  background-color: rgb(212, 230, 212);
+}
+
+.review_form h3 {
+  letter-spacing: 7px;
+  box-shadow: 1px 3px 5px 1px #aaa;
+}
+
+.favourites_form {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+
+.review {
+  width: 70%;
+  list-style: none;
+  margin-left: 350px;
+}
