@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <% unless current_page?(root_path) %>
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+        <div class="container-fluid">
+          <%= image_tag "car_logo.jpg", class: "logo" %>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item active">
+                <%= link_to "Home", root_path, class: "links" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Favourites", favourites_path, class: "links" %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

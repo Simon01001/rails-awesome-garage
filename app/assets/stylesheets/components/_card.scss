@@ -1,0 +1,31 @@
+.car_card {
+  overflow: hidden;
+  background: rgb(236, 233, 233);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.car_card > img {
+  height: 200px;
+  width: 80%;
+  object-fit: cover;
+}
+
+.car_card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.car_card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}

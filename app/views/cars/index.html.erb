@@ -1,7 +1,13 @@
-<h1>Cars in this garage:</h1>
-<% @cars.each do |car| %>
-  <ul>
-    <%= link_to car.brand.capitalize, car_path(car) %>
-    <%= car.model %>
-  </ul>
-<% end %>
+<div class="sign_container">
+  <h1>Cars in this garage:</h1>
+</div>
+
+<div class="car_card">
+  <% @cars.each do |car| %>
+    <ul>
+      <%= image_tag "placeholder_car.jpg" %>
+      <h2><%= link_to car.brand.capitalize, car_path(car), class: "car_link" %></h2>
+      <p><%= car.model %></p>
+    </ul>
+  <% end %>
+</div>
